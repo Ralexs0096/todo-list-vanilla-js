@@ -1,0 +1,107 @@
+:root {
+  --background-color: #121212;
+  --container-background: #1e1e1e;
+  --text-color: #e0e0e0;
+  --input-background: #333;
+  --input-border: #444;
+  --button-background: #6200ea;
+  --button-hover: #3700b3;
+  --delete-button-color: #f44336;
+  --delete-button-hover: #d32f2f;
+  --border-color: #444;
+  --completed-text-color: #888;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background-color: var(--container-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+}
+
+.add-todo {
+  background-color: var(--button-background);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-todo:hover {
+  background-color: var(--button-hover);
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 18px;
+  background-color: var(--container-background);
+}
+
+.todo-item:hover {
+ cursor: pointer;
+ color: var(--delete-button-color);
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: var(--completed-text-color);
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--delete-button-color);
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: var(--delete-button-hover);
+}
