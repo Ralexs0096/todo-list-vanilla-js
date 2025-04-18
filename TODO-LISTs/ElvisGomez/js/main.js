@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       listTodo.appendChild(todoItem);
       inputToDo.value = "";
       updateData();
-      document.querySelector(".input-todo")?.focus();
+      document.querySelector(".input-todo").focus();
     }
   });
 
@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const pending = total - completed;
 
     const replaceData = document.querySelector(".data");
-
     if (replaceData) replaceData.remove();
 
     if (total > 0) {
@@ -60,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
       dataDiv.appendChild(span);
 
       title.insertAdjacentElement("afterend", dataDiv);
+    } else {
+      replaceData.remove();
     }
   }
 });
