@@ -36,7 +36,7 @@ header {
 
 .fondo {
   position: relative;
-  width: 400px;
+  width: 500px;
   min-height: 400px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -128,11 +128,12 @@ header {
 }
 
 .todo-item.completed {
-  text-decoration: line-through;
+  text-decoration: underline;
   color: white;
 }
 
-.delete-btn {
+.delete-btn,
+.add-btn {
   width: 30px;
   height: 30px;
   border: none;
