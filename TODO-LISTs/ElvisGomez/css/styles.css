@@ -124,7 +124,6 @@ header {
   padding: 10px;
   border-bottom: 1px solid white;
   font-size: 18px;
-  background-color: var(--container-background);
 }
 
 .todo-item.completed {
@@ -144,4 +143,22 @@ header {
   font-weight: bold;
   background-color: #090f1d;
   color: #f1efef;
+}
+.data {
+  display: none;
+  font-size: 0.9rem;
+  margin: 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data label {
+  accent-color: #090f1d;
+  margin-right: 3px;
+  font-size: 18px;
+}
+
+.data span {
+  color: #f1efef;
+  font-size: 18px;
 }
