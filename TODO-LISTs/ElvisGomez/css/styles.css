@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://i.ibb.co/CpWz8PP7/fondocity.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 2.3rem;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+}
+
+.fondo {
+  position: relative;
+  width: 500px;
+  min-height: 400px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transfomr 0.4s ease height 0.2s ease;
+  transform: scale(1);
+}
+
+.fondo .contenedor-form {
+  width: 100%;
+  padding: 40px;
+}
+
+.fondo.active .contenedor-form.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.contenedor-form h2 {
+  font-size: 2rem;
+  color: #f1efef;
+  text-align: center;
+}
+
+.contenedor-input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #f1efef;
+  margin: 30px 0;
+}
+
+.contenedor-input label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  pointer-events: none;
+  transition: 0.4s;
+  color: #f1efef;
+}
+
+.contenedor-input input:focus ~ label,
+.contenedor-input input:valid ~ label {
+  top: -5px;
+}
+
+.contenedor-input input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #f1efef;
+  padding: 0 35px 0 5 px;
+}
+
+.contenedor-input .icono {
+  position: absolute;
+  right: 8px;
+  font-size: 1.4rem;
+  color: #f1efef;
+  line-height: 57px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  font-size: 18px;
+}
+
+.todo-item.completed {
+  text-decoration: underline;
+  color: white;
+}
+
+.delete-btn,
+.add-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #090f1d;
+  color: #f1efef;
+}
+.data {
+  display: none;
+  font-size: 0.9rem;
+  margin: 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data label {
+  accent-color: #090f1d;
+  margin-right: 3px;
+  font-size: 18px;
+}
+
+.data span {
+  color: #f1efef;
+  font-size: 18px;
+}
